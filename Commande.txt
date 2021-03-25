@@ -1,0 +1,37 @@
+# Ecampus
+https://ecampus.unicaen.fr/mod/page/view.php?id=523765
+
+# Mongo Express
+http://localhost:8081/
+
+# Playground
+http://localhost:4000/
+
+
+# 1. Lancer pile container docker
+docker-compose -f stack.yml up -d
+
+# 2. Determiner l'address hote container mongo
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' docker-framework_mongo_1
+
+# 3. Inscrire resultat dans resolvers
+172.19.0.3
+
+# 4. Lancer server NodeJs dans graphql
+node index.js
+
+
+
+----- derniere étape effectué ci-dessus -------
+
+puis construisez le container :
+docker build -t graphql .
+
+unable to prepare context: unable to evaluate symlinks in Dockerfile path:
+lstat /home/robin/Documents/BaseDonnéeProjet/docker-framework/Dockerfile: no such file or directory
+
+
+
+
+# 4. Eteindre pile container docker :
+docker-compose -f stack.yml down
