@@ -73,7 +73,9 @@ Vous pouvez utiliser `D3.js` pour effectuer la visualisation des données obtenu
     },
 ```
 
+
 - on insère ces données dans le container `Mongo` :
+
 
         jq -c .titles[] titlesWithInstrument.json | grep tonality | docker exec -i docker-framework_mongo_1 sh -c 'mongoimport -d clasik -c titles --authenticationDatabase admin -u root -p example'
 
