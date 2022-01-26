@@ -1,4 +1,6 @@
 # Framework de visualisation de données avec Docker
+![](https://tokei.rs/b1/github/Powarox2159/docker-framework)
+
 
 ## Installation
 
